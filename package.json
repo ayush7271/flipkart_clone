@@ -11,12 +11,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "redux-saga": "^1.2.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build:tailwind": "npx tailwindcss build src/tailwind.css -o src/tailwind/tailwind.output.scss -c tailwind.config.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }

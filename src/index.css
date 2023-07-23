@@ -1,13 +1,293 @@
+@import url('./tailwind/tailwind.output.scss');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+	@apply bg-dark-bg-color text-white overflow-scroll;
+}
+
+input,
+div,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+	display: none;
+	/* max-height: calc(100vh - 50px); */
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+	background-color: #ffffff;
+	opacity: 30%;
+}
+
+@media screen and (max-width: 400px) and (max-height: 740px) {
+	/* .unlocklimit {
+		height: 300px;
+		.cong_text {
+			margin-top: -10px;
+		}
+		.lottie {
+			margin-bottom: -10px;
+			width: 80px;
+			height: 80px;	
+		}
+		.amount {
+			margin-top: 0px;
+		}
+		.middletext {
+			margin-top: 8px;
+		}
+		.withdrawbtn {
+			width: 100%;
+			margin-top: -30px;
+		}
+	} */
+	.chooseamount {
+		height: 200px;
+		margin-bottom: 10px;
+	}
+	.withdrawal_amount {
+		padding-top: 10px;
+	}
+	.range {
+		margin-top: -10px;
+	}
+	.address {
+		margin-top: -18px;
+	}
+	.profileDetailInputbtn {
+		width: 100%;
+		bottom: 0px;
+		left: 0;
+		color: white;
+		margin: auto;
+		padding-bottom: 4;
+		display: flex;
+		justify-content: center;
+		position: fixed;
+	}
+	.choosepayback {
+		padding-top: 30px;
+	}
+	.choose_emi {
+		height: 310px;
+	}
+	.ownership_type {
+		margin-top: -10px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-height: 800px) {
+	.profileDetailInputbtn {
+		width: 100%;
+		bottom: 15px;
+		left: 0;
+		color: white;
+		margin: auto;
+		padding-bottom: 4;
+		display: flex;
+		justify-content: center;
+		position: fixed;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.mobile-css {
+		width: 400px;
+		margin: auto;
+		border-radius: 10px;
+	}
+	.nb-button {
+		width: 320px;
+		margin: auto;
+		border-radius: 10px;
+	}
+	.modal-content {
+		width: 400px;
+		margin: auto;
+	}
+	.profileDetailInputbtn {
+		width: 100%;
+		bottom: 15px;
+		left: 0;
+		color: white;
+		margin: auto;
+		padding-bottom: 4;
+		display: flex;
+		justify-content: center;
+		position: fixed;
+	}
+}
+
+input[type='range'] {
+	-webkit-appearance: none;
+	margin: 10px 0;
+}
+
+input[type='range']:focus {
+	outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #56984c;
+	border-radius: 5px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	box-shadow: 1px 1px 1px #000000;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: #56984c;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -11px;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+	background: #56984c;
+}
+
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 10px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000;
+	background: #56984c;
+	border-radius: 5px;
+}
+input[type='range']::-moz-range-thumb {
+	box-shadow: 1px 1px 1px #000000;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: #56984c;
+	cursor: pointer;
+}
+
+.shimmer {
+	animation: loading 1s linear infinite forwards;
+	background: linear-gradient(to right, #4a4a4a 10%, #323232 18%, #393939 25%);
+	background-size: 800px 104px;
+}
+
+@keyframes loading {
+	0% {
+		background-position: -468px 0;
+	}
+
+	100% {
+		background-position: 468px 0;
+	}
+}
+
+.shimmer-body {
+	width: 100%;
+	height: 300px;
+	border: 1px;
+	border-radius: 10px;
+	animation: loading 1.5s linear infinite forwards;
+	/* background-color: rgba(128, 128, 128, 0.363); */
+	background: linear-gradient(
+		to right,
+		rgba(128, 128, 128, 0.581) 0%,
+		rgba(41, 41, 41, 0.519) 5%,
+		rgba(128, 128, 128, 0.363) 100%
+	);
+	background-size: 400px 100px;
+	background-size: 200% 100%;
+	animation: shimmerAnimation 1.5s linear infinite;
+}
+
+.shimmer {
+	width: 100%;
+	height: 70px;
+	border-radius: 10px;
+	animation: loading 1.5s linear infinite forwards;
+	background: linear-gradient(
+		to right,
+		rgba(83, 79, 79, 0.581) 0%,
+		rgba(61, 56, 56, 0.519) 5%,
+		rgba(59, 56, 56, 0.363) 100%
+	);
+	background-size: 400px 100px;
+	background-size: 200% 100%;
+	animation: shimmerAnimation 1.5s linear infinite;
+}
+
+.shimmer1 {
+	width: 10%;
+	height: 40px;
+	margin-top: 15px;
+	border-radius: 5px;
+	animation: loading 1.5s linear infinite forwards;
+	background: linear-gradient(
+		to right,
+		rgba(128, 128, 128, 0.581) 0%,
+		rgba(128, 128, 128, 0.519) 5%,
+		rgba(128, 128, 128, 0.363) 100%
+	);
+	background-size: 400px 100px;
+	background-size: 200% 100%;
+	animation: shimmerAnimation 1.5s linear infinite;
+}
+
+.shimmer2 {
+	width: 150px;
+	height: 10px;
+	margin-top: 25px;
+	border-radius: 2px;
+	margin-right: 20px;
+	animation: loading 1.5s linear infinite forwards;
+	background: linear-gradient(
+		to right,
+		rgba(128, 128, 128, 0.581) 0%,
+		rgba(128, 128, 128, 0.519) 5%,
+		rgba(128, 128, 128, 0.363) 100%
+	);
+	background-size: 400px 100px;
+	background-size: 200% 100%;
+	animation: shimmerAnimation 1.5s linear infinite;
+}
+.shimmer3 {
+	width: 100px;
+	height: 10px;
+	margin-top: 5px;
+	border-radius: 2px;
+	margin-right: 20px;
+	animation: loading 1.5s linear infinite forwards;
+	background: linear-gradient(
+		to right,
+		rgba(128, 128, 128, 0.581) 0%,
+		rgba(128, 128, 128, 0.519) 5%,
+		rgba(128, 128, 128, 0.363) 100%
+	);
+	background-size: 400px 100px;
+	background-size: 200% 100%;
+	animation: shimmerAnimation 1.5s linear infinite;
+}
+
+@keyframes shimmerAnimation {
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: white;
+	opacity: 80%;
 }

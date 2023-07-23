@@ -20,7 +20,7 @@ function* AppSagaRequestSaga(action) {
   try {
     const response = yield call(() =>
       callApi({
-        url: "https://www.nobroker.in/nb-creditline/api/v1/credit/profile?phone=+917076527533",
+        url: "https://fakestoreapi.com/products",
       })
     );
 

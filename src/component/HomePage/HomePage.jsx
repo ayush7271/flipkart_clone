@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Carousel from "./Carousel";
+import Sliderimage from "./Sliderimage";
 
 export const Homepage = () => {
   return (
@@ -110,6 +111,7 @@ export const Homepage = () => {
         </div>
       </div>
       <Carousel/>
+      <Sliderimage/>
     </div>
   );
 };

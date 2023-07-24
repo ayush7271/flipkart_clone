@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import Carousel from "./Carousel";
 
 export const Homepage = () => {
   return (
     <div className="bg-[#f1f2f4] h-screen pt-[65px]">
-      <div className="w-[95%] m-auto bg-[#ffffff]" >
-        <div className="w-[90%] h-[151px] m-auto flex justify-between text-center pt-[15px] ">
+      <div className="w-[97%] m-auto bg-[#ffffff]" >
+        <div className="w-[90%] h-[140px] m-auto flex justify-between text-center pt-[15px] ">
           <div className="w-[94px] h-[113px]">
             <div className="w-[64px] h-[64px] m-auto">
               {" "}
@@ -108,6 +109,7 @@ export const Homepage = () => {
           </div>
         </div>
       </div>
+      <Carousel/>
     </div>
   );
 };

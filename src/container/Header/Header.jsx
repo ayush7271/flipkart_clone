@@ -2,17 +2,17 @@ import { Route, Routes } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <div className="w-full h-[65px] bg-[#ffffff] fixed">
-      <div className="header w-full h-[55px] flex">
+    <div className="w-full h-[75px] bg-[#ffffff] fixed">
+      <div className="header w-full h-[65px] flex">
         <div className="">
           {" "}
           <img
-            className="w-[130px] h-[38px] ml-[50px] mt-[12px]"
+            className="w-[130px] h-[38px] ml-[50px] mt-[15px]"
             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_plus-535108.svg"
             alt=""
           />
         </div>
-        <div className="w-[45%] h-[36px] border bg-[#ffffff] mt-[10px] ml-[10px] flex  rounded-sm ">
+        <div className="w-[45%] h-[36px] border bg-[#ffffff] mt-[15px] ml-[50px] flex  rounded-sm ">
           <div className="ml-[15px] mt-[5px]">
             <svg
               width="24"
@@ -45,7 +45,7 @@ export const Header = () => {
             type="text"
           />
         </div>
-        <div className="w-[40%] h-[42px] mt-[7px]c flex justify-between">
+        <div className="w-[40%] h-[42px] ml-[100px] mt-[8px] flex justify-between">
           <div className="w-[193px] h-[24px] flex mt-[14px] ml-[12px]">
             <div className="icon">
               <img

@@ -15,7 +15,6 @@ dispatch(AppSagaRequest())
 },[])
   return (
     <div className="App">
-      <Header/>
       <MainRoute/>
     </div>
   );

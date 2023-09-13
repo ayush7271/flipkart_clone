@@ -4,7 +4,7 @@ import Sliderimage from "./Sliderimage";
 
 export const Homepage = () => {
   return (
-    <div className="bg-[#f1f2f4] h-screen pt-[65px]">
+    <div className="bg-[#f1f2f4] h-auto pt-[65px]">
       <div className="w-[97%] m-auto bg-[#ffffff]" >
         <div className="w-[90%] h-[140px] m-auto flex justify-between text-center pt-[15px] ">
           <div className="w-[94px] h-[113px]">
@@ -112,6 +112,8 @@ export const Homepage = () => {
       </div>
       <Carousel/>
       <Sliderimage/>
+      
+      
     </div>
   );
 };

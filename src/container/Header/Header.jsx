@@ -1,10 +1,11 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 export const Header = () => {
+  const navigate=useNavigate()
   return (
     <div className="w-full h-[75px] bg-[#ffffff] fixed">
       <div className="header w-full h-[65px] flex">
-        <div className="">
+        <div className="cursor-pointer" onClick={()=>{navigate('/')}}>
           {" "}
           <img
             className="w-[130px] h-[38px] ml-[50px] mt-[15px]"
